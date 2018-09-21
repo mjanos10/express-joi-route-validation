@@ -19,13 +19,14 @@
     "url": "https://github.com/mywebstuff/express-joi-route-validation/issues"
   },
   "homepage": "https://github.com/mywebstuff/express-joi-route-validation#readme",
-  "dependencies": {
-    "joi": "^13.6.0"
+  "peerDependencies": {
+    "joi": "*"
   },
   "devDependencies": {
     "eslint": "^5.6.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-prettier": "^2.6.2",
+    "joi": "^13.6.0",
     "prettier": "^1.14.3"
   }
 }
