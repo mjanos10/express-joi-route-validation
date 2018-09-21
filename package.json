@@ -1,0 +1,31 @@
+{
+  "name": "express-joi-route-validation",
+  "version": "1.0.0",
+  "description": "An expressJs route validation middleware using Joi",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mywebstuff/express-joi-route-validation"
+  },
+  "keywords": [
+    "express",
+    "joi",
+    "validation",
+    "middleware"
+  ],
+  "author": "János Mayer <hq@mywebstuff.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mywebstuff/express-joi-route-validation/issues"
+  },
+  "homepage": "https://github.com/mywebstuff/express-joi-route-validation#readme",
+  "dependencies": {
+    "joi": "^13.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.14.3"
+  }
+}
