@@ -28,6 +28,7 @@ const validator = validationSettings => {
     updateRequest: true,
     errorHandler: null,
     continueOnValidationError: false,
+    abortOnFirstError: false,
   }
 
   const options = validationSettings.options
@@ -65,6 +66,10 @@ const validator = validationSettings => {
         error.validationMessage = getValidationMessage(validation.errorMessage, error)
 
         errors.push(error)
+
+        if (options.abortOnFirstError) {
+          break
+        }
       } else if (options.updateRequest) {
         req[requestProp] = value
       }
