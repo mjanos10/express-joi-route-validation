@@ -15,7 +15,7 @@ const requestPropSchema = Joi.object().keys({
         objects: Joi.boolean().default(false),
       }),
     ),
-    languaage: Joi.any().default({}),
+    language: Joi.any().default({}),
     presence: Joi.string()
       .valid('optional', 'required', 'forbidden')
       .default('optional'),
