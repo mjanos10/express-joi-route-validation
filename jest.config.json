@@ -1,3 +1,4 @@
 {
-  "roots": ["./test"]
+  "roots": ["./test"],
+  "testEnvironment": "node"
 }
