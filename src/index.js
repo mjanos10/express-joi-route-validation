@@ -1,7 +1,7 @@
 'use strict'
 
 const Joi = require('joi')
-const { validatorSchema } = require('./schema')
+const { validateSettingsSchema } = require('./schema')
 
 const REQUEST_VALIDATION = ['params', 'query', 'body']
 const ERROR_SYMBOL = Symbol('ValidationError')
@@ -17,11 +17,7 @@ const getValidationMessage = (errorMsg = '', error) => {
 }
 
 const validator = settings => {
-  const { value: validationSettings, error: validatorError } = Joi.validate(
-    settings,
-    validatorSchema,
-  )
-
+  const { value: validationSettings, error: validatorError } = validateSettingsSchema(settings)
   if (validatorError) {
     throw new Error(`Invalid validationSettings supplied`)
   }

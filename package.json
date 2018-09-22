@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "An expressJs route validation middleware using Joi",
   "main": "./src/index.js",
+  "scripts": {
+    "test": "jest --config jest.config.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mywebstuff/express-joi-route-validation"
@@ -26,6 +29,7 @@
     "eslint": "^5.6.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-prettier": "^2.6.2",
+    "jest": "^23.6.0",
     "joi": "^13.6.0",
     "prettier": "^1.14.3"
   }
