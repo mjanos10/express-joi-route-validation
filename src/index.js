@@ -16,8 +16,11 @@ const getValidationMessage = (errorMsg = '', error) => {
   return message
 }
 
-const validator = validationSettings => {
-  const { error: validatorError } = Joi.validate(validationSettings, validatorSchema)
+const validator = settings => {
+  const { value: validationSettings, error: validatorError } = Joi.validate(
+    settings,
+    validatorSchema,
+  )
 
   if (validatorError) {
     throw new Error(`Invalid validationSettings supplied`)
@@ -39,7 +42,6 @@ const validator = validationSettings => {
     const errors = []
 
     for (let requestProp of REQUEST_VALIDATION) {
-      /** @type OneValidationSetting */
       const validation = validationSettings[requestProp]
 
       if (!validation) {
